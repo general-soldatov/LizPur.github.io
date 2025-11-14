@@ -6,12 +6,18 @@
 </head>
 <body>
   <p>Hello World</p>
-  <button>Нажми на меня!!!!!!</button>
+  <button>Увеличить</button>
   <script type="text/javascript">
-	    let number = 0;
+	    let  angle = 0;
 	    document.querySelector("button").onclick = function() {
-	        number = ++number;
-	        alert(number);
+	        angle = ++angle;
+	    }
+	    </script>
+  <button>Уменьшить</button>
+  <script type="text/javascript">
+	    let  angle = 0;
+	    document.querySelector("button").onclick = function() {
+	        angle = angle - 1;
 	    }
 	    </script>
 </body>
