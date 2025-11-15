@@ -8,13 +8,18 @@
       function calculate() {
         let angleInput = document.getElementById('angle');
         let anglenew = parseFloat(angleInput.value);
-        }
        let anglenew = document.querySelector('#angle').value;
-       if (!isNaN(anglenew)) {
-         const angleradians = anglenew * Math.PI / 180;
-         const phusic = 10*10*Math.cos(angleradians);
-         alert(`Результат: ${result.toFixed(2)}`);
-          }
+       if (isNaN(anglenew)) {
+        alert("Ошибка: введите числовое значение!");
+        return;
+      }
+       let angleradians = anglenew * Math.PI / 180;
+       let mass = 1;
+       let g = 10;
+       const phusic = mass * g * Math.cos(angleradians);
+       alert(`Результат: ${result.toFixed(2)} Ньютонов`);
+       }
+
        window.onload = () => {
          document.querySelector('#phusicbutton').addEventListener('click', calculate);
       };
