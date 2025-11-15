@@ -8,7 +8,6 @@
       function calculate() {
        let angleInput = document.getElementById('angle');
        let anglenew = parseFloat(angleInput.value);
-       let anglenew = document.querySelector('#angle').value;
        if (isNaN(anglenew)) {
         alert("Ошибка: введите числовое значение!");
         return;
@@ -16,8 +15,8 @@
        let angleradians = anglenew * Math.PI / 180;
        let mass = 1;
        let g = 10;
-       const phusic = mass * g * Math.cos(angleradians);
-       alert(`Результат: ${result.toFixed(2)} Ньютонов`);
+       let phusic = mass * g * Math.cos(angleradians);
+       alert(`Результат: ${phusic.toFixed(2)} Ньютонов`);
        }
 
        window.onload = () => {
