@@ -5,14 +5,18 @@
   <meta charset="UTF-8">
   <title>Title</title>
     <script>
-        let anglenew = document.querySelector('#angle').value;
-        if (!isNaN(angle_new)) {
-          const angleradians = anglenew * Math.PI / 180;
-          const phusic = 10*10*Math.cos(angleradians);
-          alert(`Результат: ${result.toFixed(2)}`);
-           }
-        window.onload = () => {
-          document.querySelector('#phusicbutton').addEventListener('click', calculate);
+      function calculate() {
+        let angleInput = document.getElementById('angle');
+        let anglenew = parseFloat(angleInput.value);
+        }
+       let anglenew = document.querySelector('#angle').value;
+       if (!isNaN(anglenew)) {
+         const angleradians = anglenew * Math.PI / 180;
+         const phusic = 10*10*Math.cos(angleradians);
+         alert(`Результат: ${result.toFixed(2)}`);
+          }
+       window.onload = () => {
+         document.querySelector('#phusicbutton').addEventListener('click', calculate);
       };
     </script>
 </head>
