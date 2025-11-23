@@ -15,13 +15,13 @@ function phusic(){
    let mater = select.value;
    if (mater === 'copper') {
         gravity = (size * 8.92 * 10)/1000;
-        alert(gravity + ' H');
+        alert(gravity + ' H сила тяжести маятника');
 }  else if (mater === 'silver') {
         gravity = (size * 10.49 * 10)/1000;
-        alert(gravity + ' H');
+        alert(gravity + ' H сила тяжести маятника');
 }  else if (mater === 'iron') {
         gravity = (size * 7.87 * 10)/1000;
-        alert(gravity + ' H');
+        alert(gravity + ' H сила тяжести маятника');
     }
 }
 
