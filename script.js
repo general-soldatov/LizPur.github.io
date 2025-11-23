@@ -20,7 +20,7 @@ function phusic(){
 }  else if (mater === 'iron') {
         gravity = (size * 7.87 * 10)/1000;
     }
-    alert(gravity+ ' H сила тяжести маятника'));
+    alert(gravity + ' H сила тяжести маятника');
 }
 
 window.onload = () => {
