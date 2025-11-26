@@ -1,5 +1,140 @@
-.hi {
-    margin-top: 300px;
-    margin-left: 300px;
-    width: 1000px;
+
+    #phusicbutton {
+      padding: 12px 25px;
+      margin: 5px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #3498db, #2980b9);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    }
+
+    #phusicbutton:hover {
+      background: linear-gradient(135deg, #2980b9, #3498db);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+    }
+
+    #phusicbutton:active {
+      transform: translateY(0);
+    }
+
+    #material {
+      margin-top: 15px;
+      color: white;
+    }
+
+    #prompt {
+      display: block;
+      margin-top: 10px;
+      color: #e74c3c;
+      font-weight: bold;
+    }
+
+    li {
+      list-style: none;
+      margin: 5px 0;
+      color: white;
+    }
+
+.controls-container {
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      padding: 30px;
+      margin-bottom: 30px;
+      color: white;
+    }
+
+body {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение */
+    min-height: 100vh; /* Высоте окна */
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    ustify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.pendulum-system {
+     text-align: center;
+}
+
+.double-pendulum {
+      display: flex;
+      justify-content: center;
+      gap: 0px; /* Увеличили расстояние для лучшей анимации */
+      padding: 50px;
+      position: relative;
+      background: rgba(255,255,255,0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+}
+
+.pendulum {
+       position: relative;
+}
+
+        /* Анимация для первого маятника */
+.pendulum-1 .pendulum-swing {
+       animation: pendulum1-collision 3s ease-in-out infinite;
+       transform-origin: top center;
+}
+
+        /* Анимация для второго маятника */
+.pendulum-2 .pendulum-swing {
+        animation: pendulum2-collision 3s ease-in-out infinite;
+        transform-origin: top center;
+ }
+
+.pendulum-swing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.string {
+        width: 5px;
+        height: 200px;
+        background: linear-gradient(to bottom, #bdc3c7, #7f8c8d);
+        border-radius: 2px;
+}
+
+.weight {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        position: relative;
+        top: -2px;
+        box-shadow:
+                0 8px 16px rgba(0,0,0,0.4),
+                inset -5px -5px 10px rgba(0,0,0,0.3),
+                inset 5px 5px 10px rgba(255,255,255,0.1);
+}
+
+.pendulum-1 .weight {
+        background: radial-gradient(circle at 30% 30%, #e74c3c, #c0392b);
+}
+
+.pendulum-2 .weight {
+        background: radial-gradient(circle at 30% 30%, #3498db, #2980b9);
+}
+
+        /*Анимация столкновения для маятников*/
+@keyframes pendulum1-collision {
+    0%, 15% { transform: rotate(25deg); }   /* Стоит справа */
+    35%, 70% { transform: rotate(0deg); }   /* Движение к центру и стоит */
+    90%, 100% { transform: rotate(25deg); } /* Возврат и стоит */
+}
+@keyframes pendulum2-collision {
+    0%, 35% { transform: rotate(0deg); }    /* Стоит в центре */
+    55% { transform: rotate(-25deg); }      /* Движение влево */
+    75%, 100% { transform: rotate(0deg); }  /* Возврат и стоит */
 }

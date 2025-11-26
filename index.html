@@ -6,27 +6,43 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<fieldset>
-  <input type="text" id="angle" name="angle" placeholder="Угол в градусах">
-  <input type="text" id="size" name="size" placeholder="Размер маятника(в см.куб)">
-  <button id="phusicbutton">Рассчитать</button>
-  <label id="prompt"></label>
-  <div id = 'material'>Материал маятников
-    <select required>
-      <option disabled value ='' selected>Не выбран</option>
-      <option value = 'copper'>Медь</option>
-      <option value = 'silver'>Серебро</option>
-      <option value = 'iron'>Железо</option>
-    </select>
-  </div>
-</fieldset>
+<div class="controls-container">
+  <fieldset>
+    <legend>Маятник</legend>
+    <input type="text" id="angle" name="angle" placeholder="Угол в градусах">
+    <input type="text" id="size" name="size" placeholder="Размер маятника(в см.куб)">
+    <button id="phusicbutton">Рассчитать</button>
+    <label id="prompt"></label>
+    <div id = 'material'>Материал маятников
+      <select required>
+        <option disabled value ='' selected>Не выбран</option>
+        <option value = 'copper'>Медь</option>
+        <option value = 'silver'>Серебро</option>
+        <option value = 'iron'>Железо</option>
+      </select>
+    </div>
+    </fieldset>
+</div>
 <fieldset>
   <li><label id = 'print_gravity'></label></li>
   <li><label id = 'print_angle'></label></li>
 </fieldset>
-<div id = 'img'>
-  <img class="hi" src="photo_2025-04-08_18-47-09.jpg" >
-</div>
   <script src="script.js"></script>
+<div class="pendulum-system">
+        <div class="double-pendulum">
+            <div class="pendulum pendulum-1">
+                <div class="pendulum-swing">
+                    <div class="string"></div>
+                    <div class="weight"></div>
+                </div>
+            </div>
+            <div class="pendulum pendulum-2">
+                <div class="pendulum-swing">
+                    <div class="string"></div>
+                    <div class="weight"></div>
+                </div>
+            </div>
+        </div>
+</div>
 </body>
 </html>
